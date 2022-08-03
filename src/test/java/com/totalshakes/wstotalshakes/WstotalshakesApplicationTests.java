@@ -1,15 +1,16 @@
 package com.totalshakes.wstotalshakes;
 
 import com.totalshakes.wstotalshakes.controller.IngredienteCrontoller;
+import com.totalshakes.wstotalshakes.exception.IngredienteCadastradoException;
+import com.totalshakes.wstotalshakes.exception.IngredienteNaoEncontradoException;
 import com.totalshakes.wstotalshakes.model.Ingrediente;
-import org.apache.coyote.Response;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
 class WstotalshakesApplicationTests {
@@ -22,7 +23,7 @@ class WstotalshakesApplicationTests {
     }
 
     @Test
-    void testSaveIngredienteFuncionaCorretamente() {
+    void testSaveIngredienteFuncionaCorretamente() throws IngredienteCadastradoException {
         Ingrediente ingrediente = new Ingrediente();
         ingrediente.setNome("Morango");
 
@@ -30,9 +31,8 @@ class WstotalshakesApplicationTests {
         assertEquals(HttpStatus.CREATED, ingredienteSalvo.getStatusCode());
     }
 
-    //implementar esse teste com o método de getAllIngredientes
     @Test
-    void testFindIngredienteByIdFuncionaCorretamente() {
+    void testFindIngredienteByIdFuncionaCorretamente() throws IngredienteNaoEncontradoException {
         int id = 3;
 
         ResponseEntity ingredienteEncontrado = ingredienteController.findIngredienteById(id);
@@ -40,7 +40,7 @@ class WstotalshakesApplicationTests {
     }
 
     @Test
-    void testUpdateIngredienteFuncionaCorretamente() {
+    void testUpdateIngredienteFuncionaCorretamente() throws IngredienteNaoEncontradoException {
         Ingrediente ingrediente = new Ingrediente();
         ingrediente.setNome("Manga");
         ingrediente.setId(3);
@@ -51,8 +51,8 @@ class WstotalshakesApplicationTests {
     }
 
     @Test
-    void testDeleteIngredienteByIdFuncionaCorretamente() {
-        int id = 2;
+    void testDeleteIngredienteByIdFuncionaCorretamente() throws IngredienteNaoEncontradoException {
+        int id = 3;
         ResponseEntity ingredienteExcluido = ingredienteController.deleteIngredienteById(id);
         assertEquals(HttpStatus.OK, ingredienteExcluido.getStatusCode());
     }

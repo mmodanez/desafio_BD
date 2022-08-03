@@ -3,6 +3,7 @@ package com.totalshakes.wstotalshakes.model;
 import javax.persistence.*;
 
 @Entity
+
 @Table(name = "ingrediente")
 public class Ingrediente {
 
