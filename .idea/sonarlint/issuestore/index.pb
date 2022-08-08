@@ -1,5 +1,19 @@
 
+~
+Nsrc/test/java/com/totalshakes/wstotalshakes/WstotalshakesApplicationTests.java,d/2/d2a3819c87a3929256e29bf048f729801e1b8a3b
 7
 pom.xml,4/4/442292b8a7efeabbe4cc176709b833b1792140ec
 y
 Isrc/main/java/com/totalshakes/wstotalshakes/WstotalshakesApplication.java,5/3/532c25378f119928e0fc18e9da4f1b982694b8c8
+p
+@src/main/java/com/totalshakes/wstotalshakes/model/Adicional.java,2/5/2560e971f0123cb0974c191fd7e780a3fb17338e
+å
+\src/main/java/com/totalshakes/wstotalshakes/exception/IngredienteNaoEncontradoException.java,0/0/0096550c0cf09b02a59ca6dfeb37cace6a521a63
+9
+	README.md,8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
+r
+Bsrc/main/java/com/totalshakes/wstotalshakes/model/Ingrediente.java,8/5/8561c81efc0bafb5a6624e33adfde380865a9b17
+Å
+Qsrc/main/java/com/totalshakes/wstotalshakes/repository/IngredienteRepository.java,8/0/8003df1746be1ce39d5f0e2d3967415105267145
+â
+Ysrc/main/java/com/totalshakes/wstotalshakes/exception/IngredienteCadastradoException.java,5/b/5b54fd7457a2771335d4c909fc3d97e8f9c7c23b

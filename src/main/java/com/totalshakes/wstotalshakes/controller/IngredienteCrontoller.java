@@ -10,7 +10,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/api/v1/ingrediente")
+@RequestMapping("/ingrediente")
 public class IngredienteCrontoller {
 
     @Autowired
@@ -36,7 +36,7 @@ public class IngredienteCrontoller {
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
-    @DeleteMapping("/(id)")
+    @DeleteMapping("/{id}")
     public ResponseEntity<HttpStatus> deleteIngredienteById(@PathVariable int id) throws IngredienteNaoEncontradoException {
         ingredienteService.deleteIngredienteById(id);
         return new ResponseEntity<>(HttpStatus.OK);
